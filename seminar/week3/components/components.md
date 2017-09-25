@@ -122,7 +122,8 @@ new Vue({
     },
   };
 </script>
-
+```
+```js
 <!-- 피하세요! -->
 <template>
 	<h1>
