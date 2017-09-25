@@ -97,7 +97,39 @@ new Vue({
 ### 컴포넌트 스타일 가이드
 
 #### 컴포넌트 표현식을 단순하게 사용하기
-* Vue.js의 인라인 표현식은 100% 자바스크립트입니다. 이 기능은 매우 강력하지만 잘못 사용하면 매우 복잡해질 수 있습니다. 따라서 표현식을 단순하게 사용해야 합니다.
+* Vue.js의 인라인 표현식은 100% 자바스크립트입니다. 이 기능은 매우 강력하지만 잘못 사용하면 매우 복잡해질 수 있습니다. 따라서 표현식을 단순하게 사용해야 합니다.  
+```js
+<!-- 권장합니다 -->
+<template>
+	<h1>
+		{ { `${year}-${month}` } }
+	</h1>
+</template>
+<script type="text/javascript">
+  export default {
+    computed: {
+      month() {
+        return this.twoDigits((new Date()).getUTCMonth() + 1);
+      },
+      year() {
+        return (new Date()).getUTCFullYear();
+      }
+    },
+    methods: {
+      twoDigits(num) {
+        return ('0' + num).slice(-2);
+      }
+    },
+  };
+</script>
+
+<!-- 피하세요! -->
+<template>
+	<h1>
+		{ { `${(new Date()).getUTCFullYear()}-${('0' + ((new Date()).getUTCMonth()+1)).slice(-2)}` } }
+	</h1>
+</template>
+```
 
 #### 컴포넌트 props를 잘 사용하기
 * Vue.js에서는 컴포넌트 props가 당신의 API 입니다. 강력하고 예측가능한 API를 만들면 다른 개발자가 컴포넌트를 쉽게 사용할 수 있습니다.
