@@ -42,6 +42,21 @@ new Vue({
 </div>
 ```
 
+### 지역 등록
+
+```js
+var Child = {
+  template: '<div>사용자 정의 컴포넌트 입니다!</div>'
+}
+new Vue({
+  // ...
+  components: {
+    // <my-component> 는 상위 템플릿에서만 사용할 수 있습니다.
+    'my-component': Child
+  }
+})
+```
+
 ### data는 반드시 함수여야 한다
  `Vue` 생성자에 사용할 수 있는 대부분의 옵션은 컴포넌트에서 사용할 수 있지만, 한가지 특별한 경우가 있다. `data` 는 함수여야 한다. 이렇게 쓴다면 :
 ```js
