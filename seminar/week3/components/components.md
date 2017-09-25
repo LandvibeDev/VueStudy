@@ -19,12 +19,12 @@
 사용해보자
 ------------------
 ### 등록
-~~~
+```html
 <div id="example">
   <my-component></my-component>
 </div>
-~~~
-~~~
+```
+```js
 // 등록
 Vue.component('my-component', {
   template: '<div>사용자 정의 컴포넌트 입니다!</div>'
@@ -33,36 +33,36 @@ Vue.component('my-component', {
 new Vue({
   el: '#example'
 })
-~~~
+```
 
 렌더링 결과
-~~~
+```html
 <div id="example">
   <div>사용자 정의 컴포넌트 입니다!</div>
 </div>
-~~~
+```
 
 ### data는 반드시 함수여야 한다
  `Vue` 생성자에 사용할 수 있는 대부분의 옵션은 컴포넌트에서 사용할 수 있지만, 한가지 특별한 경우가 있다. `data` 는 함수여야 한다. 이렇게 쓴다면 :
-~~~
+```js
 Vue.component('my-component', {
   template: '<span>{{ message }}</span>',
   data: {
     message: 'hello'
   }
 })
-~~~
+```
 (X) `data`는 컴포넌트 인스턴스의 함수여야한다!!
 아래와 같이 수정해서 쓰자.
 
-~~~
+```html
 <div id="example-2">
   <simple-counter></simple-counter>
   <simple-counter></simple-counter>
   <simple-counter></simple-counter>
 </div>
-~~~
-~~~
+```
+```js
 var data = { counter: 0 }
 Vue.component('simple-counter', {
   template: '<button v-on:click="counter += 1">{{ counter }}</button>',
@@ -77,7 +77,7 @@ Vue.component('simple-counter', {
 new Vue({
   el: '#example-2'
 })
-~~~
+```
 
 ### 컴포넌트 스타일 가이드
 #### 각 컴포넌트의 이름은 다음과 같아야합니다.  
@@ -111,7 +111,7 @@ Props [https://kr.vuejs.org/v2/api/#props]
 ### Props로 데이터 전달하기
 모든 컴포넌트 인스턴스에는 자체 격리 된 범위 가 있습니다. 즉, 하위 컴포넌트의 템플릿에서 상위 데이터를 직접 참조 할 수 없으며 그렇게 해서는 안됩니다. 데이터는 `props` 옵션 을 사용하여 하위 컴포넌트로 전달 될 수 있습니다.  
 `prop`는 상위 컴포넌트의 정보를 전달하기위한 사용자 지정 특성입니다. 하위 컴포넌트는 `props` 옵션을 사용하여 수신 할 것으로 기대되는 `props`를 명시적으로 선언해야합니다. 
-~~~
+```js
 Vue.component('child', {
   // props 정의
   props: ['message'],
@@ -119,10 +119,10 @@ Vue.component('child', {
   // vm의 this.message로 사용할 수 있습니다.
   template: '<span>{{ message }}</span>'
 })
-~~~
-~~~
+```
+```html
 <child message="안녕하세요!"></child>
-~~~
+```
 ~~~
 안녕하세요!
 ~~~
