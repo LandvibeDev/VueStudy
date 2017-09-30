@@ -9,13 +9,18 @@ Vue.js를 활용하여 Single Page App을 만들면서, Vue.js의 장단점을 �
    - es6~7 문법 학습
    - es5에서 달라진 점 위주로 학습
 3. Vue.js
-   - Vue 인스턴스, computed&watcher
-   - 조건부, 리스트 렌더링
-   - 이벤트 핸들링, form 입력
-   - 컴포넌트
-   - 라우팅
-   - ajax (axios)
+   - The vue instance
+   - Template Syntax
+   - Computed Properties and Watchers
+   - Class and Style Bindings
+   - Conditinal Rendering
+   - List Rendering
+   - Event Handling
+   - Form input Bindings
+   - Compoents
    - vue-class-component
+   - Vue-Router
+   - ajax (axios)
 
 ## 진행 방식
  - 돌아가면서 발표
