@@ -22,17 +22,8 @@ Vue.js를 활용하여 Single Page App을 만들면서, Vue.js의 장단점을 �
  - 일주일당 2개의 주제
  - Markdown으로 진행 (PPT 사용x)
 
-## 폴더 관리
-- week1
-  - npm사용법.md
-  - webpack사용법.md
-  - ...
-- week2
-- week3
-- ...
-
 ## 실습
-- 도현, 민교, 원근 [Repository 이동](https://github.com/LandvibeDev/bus-traffic)
-- 구범, 정민 [Repository 이동]()
+- 도현, 민교, 원근 [Repository 이동](https://github.com/LandvibeDev/inharo)
+- 구범, 정민 [Repository 이동](https://github.com/LandvibeDev/reservation_system)
 - 재승, 보민, 대호 [Repository 이동](https://github.com/LandvibeDev/catch-video)
 - 건희, 규정 [Repository 이동](https://github.com/LandvibeDev/CodeFoilo)
