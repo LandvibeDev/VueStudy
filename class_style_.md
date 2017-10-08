@@ -1,16 +1,21 @@
 # 클래스와 스타일 바인딩
 
- 데이터바인딩 =>1)엘리먼트의 클래스 목록 조작 2)인라인 스타일 조작
- Vue에서 class와 style에 **v-bind** 사용으로 특별히 향상된 기능 제공
+ 데이터바인딩(v-bind) =>1 )DOM 엘리먼트의 클래스 목록 조작 2)인라인 스타일 조작
+ Vue에서 class와 style에 **v-bind:class, v-bind:style** 사용으로 특별히 향상된 기능 제공
  (문자열외 객체, 배열에도 가능)
 
 ## HTML 클래스 바인딩
 #### 객체구문
- 클래스를 동적토글하기 위해, **v-bind:class** 에 객체 전달 가능
- 다음은 isActive==true (참)일시, active클래스 가 존재한다
+ 클래스를 동적토글하기 위해, **v-bind:class** 에 객체 전달 가능 . 
+ 다음은 isActive==true일시, active클래스 가 존재한다 . 
 ```html
 <div v-bind:class="{ active: isActive }"></div>
 ```
+렌더링하면
+```html
+<div class="active"></div>
+```
+과 같다.  
 
  객체에 필드가 더 있다면, 여러 클래스를 토글할 수 있으며, v-bind:class 디렉티브는 일반 class속성과도 공존
  ```html
@@ -31,7 +36,7 @@
 <div class="static active"></div>
 ```
 
- 만약, **hasError=true**로 수정되면, 클래스목록도 그에 따라 **"static active showing-error"**로 업데이트됨
+ 만약, **hasError=true**로 수정되면, 클래스목록도 그에 따라 "**static active showing-error**"로 업데이트됨
 
 ##### 바인딩 된 객체 시
  바인딩 된 객체는 인라인 일 필요 x
@@ -100,7 +105,7 @@ data: {
 
 ```javascript
  Vue.component('my-component', {
-  template: '<p class="i'm the new component.">Hi</p>'
+  template: '<p class="I am the new component.">Hi</p>'
 })
 ```
 위처럼 컴포넌트를 선언하였다.
@@ -111,7 +116,7 @@ data: {
 위처럼 사용할 클래스 일부를 추가했다.
 그러면 , 아래처럼 렌더링 된다
 ```html
-<p class="i'm the new component.나는 새로 추가된 클래스야">Hi</p>
+<p class="I am the new component.나는 새로 추가된 클래스야">Hi</p>
 ```
 
 클래스 바인딩도 동일하다!
