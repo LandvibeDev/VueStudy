@@ -1,13 +1,17 @@
 # 클래스와 스타일 바인딩
 
- 데이터바인딩(v-bind) =>1 )DOM 엘리먼트의 클래스 목록 조작 2)인라인 스타일 조작  
+ 데이터바인딩(v-bind)
+ 1. DOM 엘리먼트의 클래스 목록 조작
+ 2. 인라인 스타일 조작  
+
+
  Vue에서 class와 style에 **v-bind:class, v-bind:style** 사용으로 특별히 향상된 기능 제공
  (문자열외 객체, 배열에도 가능)
 
 ## HTML 클래스 바인딩
 #### 객체구문
- 클래스를 동적토글하기 위해, **v-bind:class** 에 객체 전달 가능 . 
- 다음은 isActive==true일시, active클래스 가 존재한다 . 
+ 클래스를 동적토글하기 위해, **v-bind:class** 에 객체 전달 가능 .
+ 다음은 isActive==true일시, active클래스 가 존재한다 .
 ```html
 <div v-bind:class="{ active: isActive }"></div>
 ```
@@ -124,7 +128,7 @@ data: {
 ```html
 <my-component v-bind:class="{ active: isActive }"></my-component>
 ```
-isActive=true 이면, 
+isActive=true 이면,
 ```html
 <p class="i'm the new component. active">Hi</p>
 ```
@@ -133,7 +137,7 @@ isActive=true 이면,
 # 인라인 스타일 바인딩
 
 #### 객체구문
- v-bind:style 객체구문은 매우직설적. css처럼 보이지만, jaascript객체다.  
+ v-bind:style 객체구문은 매우 직관적. css처럼 보이지만, javascript객체다.  
 _ex) 케밥표기법(kebab-case), 카멜표기법(camelCase, 따옴표함께) 사용_
 
 ```html
