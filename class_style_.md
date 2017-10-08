@@ -98,10 +98,12 @@ data: {
  사용자 정의 컴포넌트로 **class** 속성을 사용하면, 클래스가 컴포넌트의 루트 엘리먼트에 추가된다.
  이 엘리먼트는 기존 클래스를 덮어쓰지 x
 
- ```js
+ ```javascript
+ 
  Vue.component('my-component', {
   template: '<p class="i'm the new component. ">Hi</p>'
 })
+
 ```
 위처럼 컴포넌트를 선언하였다.
 
