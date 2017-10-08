@@ -9,7 +9,7 @@
  (문자열외 객체, 배열에도 가능)
 
 ## HTML 클래스 바인딩
-#### 객체구문
+### 객체구문
  클래스를 동적토글하기 위해, **v-bind:class** 에 객체 전달 가능 .
  다음은 isActive==true일시, active클래스 가 존재한다 .
 ```html
@@ -42,7 +42,7 @@
 
  만약, **hasError=true**로 수정되면, 클래스목록도 그에 따라 "**static active showing-error**"로 업데이트됨
 
-##### 바인딩 된 객체 시
+#### 바인딩 된 객체 시
  바인딩 된 객체는 인라인 일 필요 x
 ```html
  <div v-bind:class="clickObject"></div>
@@ -72,7 +72,7 @@ computed: {
   }
 }
 ```
-#### 배열 구문
+### 배열 구문
  v-bind:class에 배열을 넣어서, 클래스 목록 지정할 수 있다.
 
  ```html
@@ -104,7 +104,7 @@ data: {
 <div v-bind:class="[{ active: isActive }, errorClass]"></div>
 ```
 
-#### 컴포넌트와 함께 사용하는 방법
+### 컴포넌트와 함께 사용하는 방법
  사용자 정의 컴포넌트로 **class** 속성을 사용하면, 클래스가 컴포넌트의 루트 엘리먼트에 추가된다.
  이 엘리먼트는 기존 클래스를 덮어쓰지 x
 
@@ -136,7 +136,7 @@ isActive=true 이면,
 
 # 인라인 스타일 바인딩
 
-#### 객체구문
+### 객체구문
  v-bind:style 객체구문은 매우 직관적. css처럼 보이지만, javascript객체다.  
 _ex) 케밥표기법(kebab-case), 카멜표기법(camelCase, 따옴표함께) 사용_
 
@@ -163,7 +163,7 @@ data: {
 }
 ```
 
-#### 배열 구문
+### 배열 구문
 
 **v-bind:style 배열**은 같은 스타일의 엘리먼트에 여러 개의 스타일 객체를 사용 ok
 ```html
