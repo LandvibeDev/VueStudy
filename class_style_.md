@@ -19,7 +19,7 @@
 </div>
  ```
  데이터는
- ```
+ ```javascript
  data: {
   isActive: true,
   hasError: false
@@ -39,7 +39,7 @@
  <div v-bind:class="clickObject"></div>
 ```
 
-```html
+```javascript
  data: {
   clickObject: {
     active: true,
@@ -49,7 +49,7 @@
 ```
  와 같다. 또한, 객체를 반환하는 '계산된속성'에도 바인딩 가능.=>일반적이지만 강력함
 
-```
+```javascript
  data: {
   isActive: true,
   hasError: null
@@ -70,7 +70,7 @@ computed: {
  <div v-bind:class="[activeClass, errorClass]"></div>
 ```
 
-```js
+```javascript
 data: {
   activeClass: 'active',
   errorClass: 'showing-error'
@@ -99,11 +99,9 @@ data: {
  이 엘리먼트는 기존 클래스를 덮어쓰지 x
 
  ```javascript
- 
  Vue.component('my-component', {
-  template: '<p class="i'm the new component. ">Hi</p>'
+  template: ' <p class="i'm the new component.">Hi</p> '
 })
-
 ```
 위처럼 컴포넌트를 선언하였다.
 
@@ -113,7 +111,7 @@ data: {
 위처럼 사용할 클래스 일부를 추가했다.
 그러면 , 아래처럼 렌더링 된다
 ```html
-<p class="i'm the new component. 나는 새로 추가된 클래스야">Hi</p>
+<p class="i'm the new component.나는 새로 추가된 클래스야">Hi</p>
 ```
 
 클래스 바인딩도 동일하다!
@@ -132,7 +130,7 @@ _ex) 케밥표기법(kebab-case), 카멜표기법(camelCase, 따옴표함께) �
 ```html
 <div v-bind:style="{ color: myColor, fontSize: myFontSize + 'px' }"></div>
 ```
-```js
+```javascript
 data: {
   myColor: 'red',
   myFontSize: 30
@@ -143,7 +141,7 @@ data: {
  <div v-bind:style="myObject"></div>
 ```
 
-```js
+```javascript
 data: {
   myObject: {
     color: 'red',
